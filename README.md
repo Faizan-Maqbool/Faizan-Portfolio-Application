@@ -13,6 +13,7 @@ A modern, beautiful portfolio website built entirely with React, featuring a stu
 - 🎯 Portfolio showcase with filtering
 - 📝 Blog section
 - 💼 Professional experience timeline
+- 🎓 Major Projects showcase
 
 ## Tech Stack
 
@@ -39,8 +40,8 @@ Portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Portfolio
+   git clone https://github.com/Faizan-Maqbool/Faizan-Portfolio-Application.git
+   cd Faizan-Portfolio-Application
    ```
 
 2. **Install dependencies**
@@ -58,17 +59,11 @@ Portfolio/
 
 ## Deployment on Vercel
 
-1. **Install Vercel CLI** (if not already installed)
-   ```bash
-   npm i -g vercel
-   ```
+The project is configured for automatic deployment on Vercel. Simply push to the `main` branch and Vercel will automatically build and deploy.
 
-2. **Deploy**
-   ```bash
-   vercel
-   ```
-
-3. **No environment variables are required**
+1. **Build command**: `cd client && npm install && npm run build`
+2. **Output directory**: `client/build`
+3. **Framework**: Create React App
 
 ## Available Scripts
 
@@ -90,6 +85,10 @@ The contact form is fully client-side. When visitors submit the form, their defa
 - **Cream**: `#F5F1E8` - Background color
 - **White**: `#FFFFFF` - Card backgrounds
 
+## Live Demo
+
+🌐 [View Live Portfolio](https://faizan-portfolio-application.vercel.app)
+
 ## License
 
 MIT License
@@ -100,4 +99,3 @@ Faizan Maqbool
 - Email: faizanmaqbool046@gmail.com
 - LinkedIn: [Faizan Maqbool](https://www.linkedin.com/in/faizan-maqbool-39b801313)
 - GitHub: [Faizan-Maqbool](https://github.com/Faizan-Maqbool)
-
