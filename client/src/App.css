@@ -1,0 +1,32 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 300px;
+  padding: var(--spacing-lg);
+  background-color: var(--cream);
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+@media (max-width: 992px) {
+  .app {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-sm);
+  }
+}
+

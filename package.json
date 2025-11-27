@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-frontend",
+  "version": "1.0.0",
+  "description": "Modern portfolio frontend built with React",
+  "private": true,
+  "scripts": {
+    "start": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "test": "cd client && npm test",
+    "install-client": "cd client && npm install"
+  },
+  "author": "Faizan Maqbool",
+  "license": "MIT"
+}
