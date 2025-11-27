@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Resume.css';
 
 const Resume = () => {
-  const [pdfLoaded, setPdfLoaded] = useState(false);
-
   useEffect(() => {
-    // Load PDF.js for preview
+    // Load PDF.js for preview (if needed in future)
     const script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js';
-    script.onload = () => {
-      setPdfLoaded(true);
-    };
     document.head.appendChild(script);
   }, []);
 
@@ -24,16 +19,37 @@ const Resume = () => {
   ];
 
   const experience = [
+     {
+      title: 'Web Developer Intern — Medical Imaging & Diagnostic Lab, NCAI',
+      period: 'MERN Stack Development | AI Integration',
+      description:
+        'Led the RxScan initiative, an AI-powered medical imaging platform for American healthcare users. Coordinated the developer team, owned feature delivery across the MERN stack, and worked with AI engineers to embed intelligent imaging interpretation while safeguarding usability, security, and performance.'
+    },
+    {
+      title: 'Software Engineering Intern — Forage AI',
+      period: 'Sept 2025',
+      description:
+        'Executed the complete software engineering lifecycle for a live EA Sports project—requirements analysis, change identification, redesign, documentation, and delivery of an improved system that aligned with modern engineering practices.'
+    },
     {
       title: 'Programming Tutor (Remote - Freelance)',
       period: 'June 2023 — Present',
-      description: 'Tutored 30+ students remotely in programming concepts, improving average coding proficiency by 40%. Specialized in teaching JavaScript, Python, React.js, Flutter, and data structures & algorithms.'
+      description:
+        'Provide personalized guidance across JavaScript, Python, React, Flutter, and core CS topics through focused mentoring sessions.'
+    },
+     {
+      title: 'Founding Member & Software Engineering Lead — Computer Science Society, Research Circle',
+      period: 'COMSATS University Islamabad',
+      description:
+        'One of the founding members of the Research Circle, established to cultivate a strong research culture within the Computer Science community. Contributed to core management team, supporting HR activities, event planning, and coordination. Served as Software Engineering Lead, delivering weekly research sessions focused on literature reviews, research methodologies, and academic writing. Guided fellow students on reading research papers, analyzing literature, identifying research gaps, and planning long-term research progress. Conducted structured weekly circles training students in research skills, critical thinking, and academic development.'
     },
     {
       title: 'Assistant Volunteer - Industrial Liaison Cell (ILC)',
       period: 'June 2023 — 2024',
-      description: 'Collaborated with industry professionals to bridge the gap between academia and industry. Assisted in organizing workshops, seminars, and networking events for students.'
+      description:
+        'Collaborated with industry professionals to bridge the gap between academia and industry. Assisted in organizing workshops, seminars, and networking events for students.'
     }
+   
   ];
 
   const skills = [

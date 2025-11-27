@@ -145,7 +145,21 @@ textarea.form-input {
   font-size: 1.2rem;
 }
 
+@media (max-width: 992px) {
+  .input-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .mapbox {
+    height: 250px;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
   .input-wrapper {
     grid-template-columns: 1fr;
   }
@@ -153,6 +167,27 @@ textarea.form-input {
   .form-btn {
     width: 100%;
     justify-self: stretch;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .mapbox {
+    height: 200px;
+  }
+  
+  .form-title {
+    font-size: 1.3rem;
+  }
+  
+  .form-input {
+    font-size: 0.95rem;
+    padding: var(--spacing-sm);
+  }
+  
+  .form-btn {
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-lg);
   }
 }
 

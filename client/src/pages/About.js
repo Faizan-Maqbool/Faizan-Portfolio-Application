@@ -26,26 +26,65 @@ const About = () => {
     }
   ];
 
-  const testimonials = [
+  const projects = [
     {
-      avatar: '/assets/images/avatar-1.png',
-      name: 'Ahmad Ali',
-      text: "Faizan's tutoring helped me understand complex programming concepts with ease. His teaching methodology is excellent and he always makes sure I grasp the fundamentals before moving to advanced topics."
+      name: 'CardioLink',
+      subtitle: 'AI-Based Cardiac Health System',
+      technologies: ['MERN', 'Flutter', 'Node.js', 'Express', 'Socket.io', 'MongoDB', 'JWT', 'Python', 'TensorFlow', 'OpenCV', '2D CNN', 'LSTMs'],
+      description: 'Developed a full-stack AI-based healthcare app to predict cardiac conditions (e.g., angina, MI) using CNNs trained on ECGs, echo scans, and heartbeat audio with 92% model accuracy.',
+      highlights: [
+        'Integrated real-time chat (Socket.io)',
+        'Secure JWT authentication',
+        'AI chatbot integration',
+        'Health tracker features',
+        'Video consultation capabilities',
+        'Supporting 500+ active users'
+      ],
+      icon: 'heart-outline'
     },
     {
-      avatar: '/assets/images/avatar-2.png',
-      name: 'Sara Khan',
-      text: 'Working with Faizan on web development projects was an amazing experience. He has deep knowledge of React and Node.js, and his ability to explain complex concepts in simple terms is remarkable.'
+      name: 'Studify',
+      subtitle: 'AI-Powered Productivity App',
+      technologies: ['Flutter', 'Dart', 'Firebase', 'Gemini API', 'Google ML Kit'],
+      description: 'Developed a mobile productivity app for students with smart AI chat, real-time generated quizzes, OCR, and voice search using ML Kit and Gemini Model.',
+      highlights: [
+        'Smart AI chat integration',
+        'Real-time quiz generation',
+        'OCR capabilities',
+        'Voice search functionality',
+        'Secure offline PDF generation with encryption',
+        'Scaled to handle 10,000+ records via Firebase'
+      ],
+      icon: 'school-outline'
     },
     {
-      avatar: '/assets/images/avatar-3.png',
-      name: 'Fatima Sheikh',
-      text: 'Faizan helped me with Flutter development and machine learning concepts. His practical approach to teaching and real-world examples made learning enjoyable.'
+      name: 'Chatty',
+      subtitle: 'Realtime Chat Application',
+      technologies: ['MERN Stack', 'Socket.io', 'JWT', 'Zustand', 'TailwindCSS', 'DaisyUI'],
+      description: 'Built a responsive, real-time chat app with MERN stack featuring secure login/logout (JWT) and achieving instant message delivery under 100ms using Socket.io.',
+      highlights: [
+        'Real-time messaging under 100ms',
+        'Secure JWT authentication',
+        'Global state management via Zustand',
+        'Responsive design with TailwindCSS',
+        '30% improved mobile retention'
+      ],
+      icon: 'chatbubbles-outline'
     },
     {
-      avatar: '/assets/images/avatar-4.png',
-      name: 'Hassan Ahmed',
-      text: "Faizan is an exceptional tutor who goes above and beyond to ensure student success. His expertise in data structures and algorithms helped me ace my programming interviews."
+      name: 'RxScan',
+      subtitle: 'AI-Powered Medical Scanning Platform',
+      technologies: ['MERN Stack', 'AI/ML', 'OCR', 'Computer Vision'],
+      description: 'Advanced AI-powered medical scanning platform designed to interpret prescriptions and medicine information automatically. Uses custom-built OCR system to convert handwritten or printed prescriptions into structured digital text.',
+      highlights: [
+        'Custom OCR for prescription scanning',
+        'AI-based medicine imaging and identification',
+        'Smart recommendation system',
+        'Instant medicine information retrieval',
+        'Secure, high-performance healthcare environment',
+        'Built for real-world medical use cases'
+      ],
+      icon: 'medical-outline'
     }
   ];
 
@@ -102,29 +141,53 @@ const About = () => {
         </ul>
       </section>
 
-      <section className="testimonials">
-        <h3 className="h3 testimonials-title">Student Testimonials</h3>
-        <ul className="testimonials-list has-scrollbar">
-          {testimonials.map((testimonial, index) => (
-            <motion.li
+      <section className="projects-section">
+        <h3 className="h3 projects-title">Major Projects</h3>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <motion.div
               key={index}
-              className="testimonials-item"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="project-card"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="content-card">
-                <figure className="testimonials-avatar-box">
-                  <img src={testimonial.avatar} alt={testimonial.name} width="60" />
-                </figure>
-                <h4 className="h4 testimonials-item-title">{testimonial.name}</h4>
-                <div className="testimonials-text">
-                  <p>{testimonial.text}</p>
+              <div className="project-header">
+                <div className="project-icon-box">
+                  <ion-icon name={project.icon}></ion-icon>
+                </div>
+                <div className="project-title-wrapper">
+                  <h4 className="h4 project-name">{project.name}</h4>
+                  <p className="project-subtitle">{project.subtitle}</p>
                 </div>
               </div>
-            </motion.li>
+              
+              <p className="project-description">{project.description}</p>
+              
+              <div className="project-technologies">
+                <span className="tech-label">Technologies:</span>
+                <div className="tech-tags">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="project-highlights">
+                <span className="highlights-label">Key Features:</span>
+                <ul className="highlights-list">
+                  {project.highlights.map((highlight, highlightIndex) => (
+                    <li key={highlightIndex} className="highlight-item">
+                      <ion-icon name="checkmark-circle-outline"></ion-icon>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="clients">

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [showContacts, setShowContacts] = useState(false);
-  const location = useLocation();
 
   return (
     <aside className="sidebar">
