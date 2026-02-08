@@ -743,7 +743,7 @@
   // PDF.js for rendering PDF preview
   document.addEventListener('DOMContentLoaded', function() {
     // Configuration
-    const pdfUrl = './assets/docs/Faizan-Maqbool-Resume.pdf';
+    const pdfUrl = './assets/docs/Faizan_Maqbool_fullstack.pdf';
     const downloadBtn = document.getElementById('downloadResumeBtn');
     const viewBtn = document.getElementById('viewResumeBtn');
     const viewFullBtn = document.getElementById('viewFullPdf');
@@ -795,7 +795,7 @@
       // Create a temporary link to trigger download
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.download = 'Faizan-Maqbool-Resume.pdf';
+      link.download = 'Faizan_Maqbool_fullstack.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
