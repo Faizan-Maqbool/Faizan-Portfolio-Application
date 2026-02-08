@@ -63,15 +63,15 @@ const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/assets/docs/Faizan-Maqbool-Resume.pdf';
-    link.download = 'Faizan-Maqbool-Resume.pdf';
+    link.href = '/assets/docs/Faizan_Maqbool_fullstack.pdf';
+    link.download = 'Faizan_Maqbool_fullstack.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleView = () => {
-    window.open('/assets/docs/Faizan-Maqbool-Resume.pdf', '_blank');
+    window.open('/assets/docs/Faizan_Maqbool_fullstack.pdf', '_blank');
   };
 
   return (
@@ -149,7 +149,7 @@ const Resume = () => {
           </div>
           <div className="pdf-preview">
             <iframe
-              src="/assets/docs/Faizan-Maqbool-Resume.pdf"
+              src="/assets/docs/Faizan_Maqbool_fullstack.pdf"
               title="Resume Preview"
               className="pdf-iframe"
             ></iframe>
